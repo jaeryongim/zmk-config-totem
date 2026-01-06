@@ -194,10 +194,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp Q  &kp W  &kp E    &kp R      &kp T        &kp Y                   &kp U      &kp I      &kp O    &kp P
-       &kp A  &kp S  &kp D    &kp F      &kp G        &kp H                   &kp J      &kp K      &kp L    &kp SINGLE_QUOTE
-&kp Q  &kp Z  &kp X  &kp C    &kp V      &kp B        &kp N                   &kp M      &kp COMMA  &kp DOT  &kp FSLH          &kp BSLH
-                     &kp DEL  &lt 2 TAB  &kp SPACE    &OSM_SHIFT RIGHT_SHIFT  &lt 4 ESC  &mo 1
+       &kp Q  &kp W  &kp E  &kp R      &kp T    &kp Y                   &kp U  &kp I      &kp O    &kp P
+       &kp A  &kp S  &kp D  &kp F      &kp G    &kp H                   &kp J  &kp K      &kp L    &kp SINGLE_QUOTE
+&kp Q  &kp Z  &kp X  &kp C  &kp V      &kp B    &kp N                   &kp M  &kp COMMA  &kp DOT  &kp FSLH          &kp BSLH
+                     &mo 3  &kp SPACE  &mo 2    &OSM_SHIFT RIGHT_SHIFT  &mo 4  &mo 1
             >;
         };
 
@@ -213,7 +213,7 @@
         num_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "NAVI";
+            label = "NUM";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -251,17 +251,17 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp NUMBER_5    &trans  &kp F7        &kp F8  &kp F9  &kp F12
-        &kp LCTRL     &kp LALT      &kp LGUI      &kp LEFT_SHIFT  &none           &trans  &kp F4        &kp F5  &kp F6  &kp F11
-&trans  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp NUMBER_0    &trans  &kp F1        &kp F2  &kp F3  &kp F10  &trans
-                                    &trans        &none           &none           &trans  &kp CAPSLOCK  &trans
+       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp NUMBER_5    &trans  &kp F7        &kp F8  &kp F9  &kp F12
+       &kp LCTRL     &kp LALT      &kp LGUI      &kp LEFT_SHIFT  &none           &trans  &kp F4        &kp F5  &kp F6  &kp F11
+&mo 6  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp NUMBER_0    &trans  &kp F1        &kp F2  &kp F3  &kp F10  &trans
+                                   &trans        &none           &none           &trans  &kp CAPSLOCK  &trans
             >;
         };
 
-        sim_layer {
+        navi_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "SYM";
+            label = "NAVI";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -275,10 +275,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
-                                  &trans     &gif      &mo 1        &trans        &kp C_PP        &trans
+       &none      &none     &none     &none      &none    &kp PG_UP      &kp HOME        &kp UP_ARROW    &kp END    &none
+       &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHFT  &none    &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp SPACE
+&none  &none      &none     &none     &none      &none    &kp ESCAPE     &kp BACKSPACE   &kp ENTER       &kp TAB    &kp DEL    &none
+                            &none     &gif       &none    &kp ENTER      &kp BACKSPACE   &none
             >;
         };
 
