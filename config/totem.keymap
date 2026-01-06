@@ -101,6 +101,20 @@
             timeout-ms = <20>;
             layers = <0>;
         };
+
+        lang_en_kr {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <13 12>;
+            timeout-ms = <20>;
+            layers = <0>;
+        };
+
+        jkl_cmd {
+            bindings = <&OSM_SHIFT LGUI>;
+            key-positions = <16 17 18>;
+            timeout-ms = <20>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -117,6 +131,44 @@
                 <&kp LSHFT>,
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
+        };
+    };
+
+    behaviors {
+        OSM_SHIFT: OSM_SHIFT {
+            compatible = "zmk,behavior-sticky-key";
+            label = "OSM_SHIFT";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            quick-release;
+            release-after-ms = <2000>;
+        };
+
+        KC_LEFT_ENCLOSE: KC_LEFT_ENCLOSE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "KC_LEFT_ENCLOSE";
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        KC_RIGHT_ENCLOSE: KC_RIGHT_ENCLOSE {
+            compatible = "zmk,behavior-mod-morph";
+            label = "KC_RIGHT_ENCLOSE";
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        REV_COLON: REV_COLON {
+            compatible = "zmk,behavior-mod-morph";
+            label = "REV_COLON";
+            bindings = <&kp COLON>, <&kp SEMICOLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -142,19 +194,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp Q  &kp W  &kp E    &kp R      &kp T        &kp Y    &kp U      &kp I      &kp O    &kp P
-       &kp A  &kp S  &kp D    &kp F      &kp G        &kp H    &kp J      &kp K      &kp L    &kp SINGLE_QUOTE
-&kp Q  &kp Z  &kp X  &kp C    &kp V      &kp B        &kp N    &kp M      &kp COMMA  &kp DOT  &kp FSLH          &kp BSLH
-                     &kp DEL  &lt 3 TAB  &kp SPACE    &kp RET  &lt 2 ESC  &kp BSPC
+       &kp Q  &kp W  &kp E    &kp R      &kp T        &kp Y                   &kp U      &kp I      &kp O    &kp P
+       &kp A  &kp S  &kp D    &kp F      &kp G        &kp H                   &kp J      &kp K      &kp L    &kp SINGLE_QUOTE
+&kp Q  &kp Z  &kp X  &kp C    &kp V      &kp B        &kp N                   &kp M      &kp COMMA  &kp DOT  &kp FSLH          &kp BSLH
+                     &kp DEL  &lt 3 TAB  &kp SPACE    &OSM_SHIFT RIGHT_SHIFT  &lt 2 ESC  &kp BSPC
             >;
         };
 
-        layer_6 {
+        symbol_layer {
             bindings = <
-        &kp MINUS         &kp LS(MINUS)         &kp EQUAL         &kp LS(EQUAL)      &kp NON_US_BACKSLASH    &trans     &kp RS(NUMBER_7)  &kp RS(NUMBER_8)  &kp PERIOD      &trans
-        &kp SINGLE_QUOTE  &kp LS(SINGLE_QUOTE)  &trans            &trans             &kp GRAVE               &trans     &trans            &trans            &trans          &trans
-&trans  &kp SEMICOLON     &kp LS(SEMICOLON)     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                  &kp MINUS  &kp RS(NUMBER_1)  &kp RS(COMMA)     &kp RS(PERIOD)  &kp RS(SLASH)  &trans
-                                                &trans            &trans             &kp ENTER               &trans     &trans            &trans
+        &kp MINUS         &kp LS(MINUS)         &kp EQUAL         &kp LS(EQUAL)      &kp NON_US_BACKSLASH    &trans      &kp RS(NUMBER_7)  &kp RS(NUMBER_8)  &kp PERIOD      &trans
+        &kp SINGLE_QUOTE  &kp LS(SINGLE_QUOTE)  &KC_LEFT_ENCLOSE  &KC_RIGHT_ENCLOSE  &kp GRAVE               &REV_COLON  &kp RSHIFT        &kp RGUI          &kp RALT        &kp RCTRL
+&trans  &kp SEMICOLON     &kp LS(SEMICOLON)     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                  &kp MINUS   &kp RS(NUMBER_1)  &kp RS(COMMA)     &kp RS(PERIOD)  &kp RS(SLASH)  &trans
+                                                &trans            &trans             &kp ENTER               &trans      &trans            &trans
             >;
         };
 
