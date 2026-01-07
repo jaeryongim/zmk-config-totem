@@ -40,10 +40,11 @@
             layers = <0>;
         };
 
-        combo_tvp {
-            timeout-ms = <100>;
-            key-positions = <11 12 13>;
-            bindings = <&tog 5>;
+        s_f_raycast {
+            timeout-ms = <20>;
+            key-positions = <11 13>;
+            bindings = <&kp LA(SPACE)>;
+            layers = <0>;
         };
 
         comma_dot_semicolon {
