@@ -292,7 +292,7 @@
 
         media_layer {
             bindings = <
-        &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &trans      &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans      &trans  &trans    &trans  &trans  &trans  &trans  &trans
         &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp K_MUTE  &trans  &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans                &trans                &trans      &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                                                     &trans      &trans  &trans    &trans  &trans  &trans
