@@ -187,10 +187,10 @@
 
         symbol_layer {
             bindings = <
-        &kp MINUS         &kp LS(MINUS)         &kp EQUAL         &kp LS(EQUAL)      &kp NON_US_BACKSLASH    &trans      &kp RS(NUMBER_7)  &kp RS(NUMBER_8)  &kp PERIOD      &trans
-        &kp SINGLE_QUOTE  &kp LS(SINGLE_QUOTE)  &KC_LEFT_ENCLOSE  &KC_RIGHT_ENCLOSE  &kp GRAVE               &REV_COLON  &kp RSHIFT        &kp RGUI          &kp RALT        &kp RCTRL
-&trans  &kp SEMICOLON     &kp LS(SEMICOLON)     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                  &kp MINUS   &kp RS(NUMBER_1)  &kp RS(COMMA)     &kp RS(PERIOD)  &kp RS(SLASH)  &trans
-                                                &trans            &trans             &kp ENTER               &trans      &trans            &trans
+        &kp MINUS         &kp LS(MINUS)         &kp EQUAL         &kp LS(EQUAL)      &kp BACKSLASH    &trans      &kp RS(NUMBER_7)  &kp RS(NUMBER_8)  &kp PERIOD      &trans
+        &kp SINGLE_QUOTE  &kp LS(SINGLE_QUOTE)  &KC_LEFT_ENCLOSE  &KC_RIGHT_ENCLOSE  &kp GRAVE        &REV_COLON  &kp RSHIFT        &kp RGUI          &kp RALT        &kp RCTRL
+&trans  &kp SEMICOLON     &kp LS(SEMICOLON)     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans           &kp MINUS   &kp RS(NUMBER_1)  &kp RS(COMMA)     &kp RS(PERIOD)  &kp RS(SLASH)  &trans
+                                                &trans            &trans             &kp ENTER        &trans      &trans            &trans
             >;
         };
 
