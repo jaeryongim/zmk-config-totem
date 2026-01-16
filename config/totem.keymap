@@ -124,6 +124,7 @@
             label = "SW_APP";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+
             ignored-key-positions = <7 16 17 18>;
         };
 
@@ -132,6 +133,7 @@
             label = "SW_WIN";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
+
             ignored-key-positions = <13>;
             ignored-layers = <NAV>;
         };
@@ -276,10 +278,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &SW_WIN      &kp LS(LG(TAB))  &none     &kp LG(TAB)  &SW_APP    &kp PG_UP      &kp HOME        &kp UP_ARROW    &kp END    &none
-       &kp LCTRL  &kp LALT         &kp LGUI  &kp LSHFT    &none    &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp SPACE
-&none  &none      &none            &none     &none        &none    &kp ESCAPE     &kp BACKSPACE   &kp ENTER       &kp TAB    &kp DEL    &none
-                                   &none     &none        &none    &kp ENTER      &kp BACKSPACE   &none
+       &SW_WIN    &kp LS(LG(TAB))  &kp LG(W)  &kp LG(TAB)  &SW_APP    &kp PG_UP      &kp HOME        &kp UP_ARROW    &kp END    &none
+       &kp LCTRL  &kp LALT         &kp LGUI   &kp LSHFT    &none      &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp SPACE
+&none  &none      &none            &none      &none        &none      &kp ESCAPE     &kp BACKSPACE   &kp ENTER       &kp TAB    &kp DEL    &none
+                                   &none      &none        &none      &kp ENTER      &kp BACKSPACE   &none
             >;
         };
 
