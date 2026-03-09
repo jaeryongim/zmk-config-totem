@@ -54,27 +54,6 @@
             layers = <0>;
         };
 
-        zx_cut {
-            bindings = <&kp LG(X)>;
-            key-positions = <21 22>;
-            timeout-ms = <20>;
-            layers = <0>;
-        };
-
-        xc_copy {
-            bindings = <&kp LG(C)>;
-            key-positions = <22 23>;
-            timeout-ms = <20>;
-            layers = <0>;
-        };
-
-        cv_paste {
-            bindings = <&kp LG(V)>;
-            key-positions = <23 24>;
-            timeout-ms = <20>;
-            layers = <0>;
-        };
-
         ui_equal {
             bindings = <&kp EQUAL>;
             key-positions = <6 7>;
@@ -113,6 +92,20 @@
         jkl_cmd {
             bindings = <&OSM_SHIFT LGUI>;
             key-positions = <16 17 18>;
+            timeout-ms = <20>;
+            layers = <0>;
+        };
+
+        xv_ctrl {
+            bindings = <&OSM_CTRL LGUI>;
+            key-positions = <22 24>;
+            timeout-ms = <20>;
+            layers = <0>;
+        };
+
+        zv_tab {
+            bindings = <&kp TAB>;
+            key-positions = <21 24>;
             timeout-ms = <20>;
             layers = <0>;
         };
@@ -172,6 +165,15 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        OSM_CTRL: OSM_CTRL {
+            compatible = "zmk,behavior-sticky-key";
+            label = "OSM_CTRL";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            quick-release;
+            release-after-ms = <2000>;
         };
     };
 
