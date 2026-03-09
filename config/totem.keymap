@@ -97,7 +97,7 @@
         };
 
         xv_ctrl {
-            bindings = <&OSM_CTRL LGUI>;
+            bindings = <&OSM_CTRL LCTRL>;
             key-positions = <22 24>;
             timeout-ms = <20>;
             layers = <0>;
