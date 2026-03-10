@@ -1,0 +1,27 @@
+# Build artifacts
+build/
+zmk/
+
+# West workspace
+.west/
+bootloader/
+modules/
+tools/
+zephyr/
+
+# Firmware binaries
+*.uf2
+*.hex
+*.bin
+*.elf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
