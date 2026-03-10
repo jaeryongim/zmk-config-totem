@@ -175,6 +175,16 @@
             quick-release;
             release-after-ms = <2000>;
         };
+
+        STACK_OSM: STACK_OSM {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STACK_OSM";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            quick-release;
+            ignore-modifiers;
+            release-after-ms = <1300>;
+        };
     };
 
     keymap {
