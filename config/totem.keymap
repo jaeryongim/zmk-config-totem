@@ -90,7 +90,7 @@
         };
 
         jkl_cmd {
-            bindings = <&OSM_SHIFT LGUI>;
+            bindings = <&OSM LGUI>;
             key-positions = <16 17 18>;
             timeout-ms = <20>;
             layers = <0>;
@@ -131,13 +131,14 @@
             ignored-layers = <NAV>;
         };
 
-        OSM_SHIFT: OSM_SHIFT {
+        OSM: OSM {
             compatible = "zmk,behavior-sticky-key";
-            label = "OSM_SHIFT";
+            label = "OSM";
             bindings = <&kp>;
             #binding-cells = <1>;
             quick-release;
             release-after-ms = <2000>;
+            ignore-modifiers;
         };
 
         KC_LEFT_ENCLOSE: KC_LEFT_ENCLOSE {
@@ -185,6 +186,26 @@
             ignore-modifiers;
             release-after-ms = <1000>;
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-sticky-key";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            quick-release;
+            release-after-ms = <1000>;
+            ignore-modifiers;
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-sticky-key";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            quick-release;
+            release-after-ms = <1000>;
+            ignore-modifiers;
+        };
     };
 
     keymap {
@@ -209,10 +230,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp Q  &kp W  &kp E  &kp R        &kp T    &kp Y                   &kp U  &kp I      &kp O    &kp P
-           &kp A  &kp S  &kp D  &kp F        &kp G    &kp H                   &kp J  &kp K      &kp L    &kp SINGLE_QUOTE
-&kp LCTRL  &kp Z  &kp X  &kp C  &kp V        &kp B    &kp N                   &kp M  &kp COMMA  &kp DOT  &kp FSLH          &mo 6
-                         &mo 3  &lt 4 SPACE  &mo 2    &OSM_SHIFT RIGHT_SHIFT  &mo 4  &mo 1
+           &kp Q  &kp W  &kp E  &kp R        &kp T    &kp Y             &kp U  &kp I      &kp O    &kp P
+           &kp A  &kp S  &kp D  &kp F        &kp G    &kp H             &kp J  &kp K      &kp L    &kp SINGLE_QUOTE
+&kp LCTRL  &kp Z  &kp X  &kp C  &kp V        &kp B    &kp N             &kp M  &kp COMMA  &kp DOT  &kp FSLH          &mo 6
+                         &mo 3  &lt 4 SPACE  &mo 2    &OSM RIGHT_SHIFT  &mo 4  &mo 1
             >;
         };
 
